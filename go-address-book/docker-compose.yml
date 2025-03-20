@@ -1,0 +1,27 @@
+version: '3.8'
+
+services:
+  address-book:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: address-book
+    volumes:
+      - ./data:/app/data
+    stdin_open: true  # Keep STDIN open
+    tty: true        # Allocate a pseudo-TTY
+    restart: unless-stopped
+    environment:
+      - TZ=UTC       # Set timezone
+    healthcheck:
+      test: ["CMD", "/app/healthcheck.sh"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 5s
+    networks:
+      - address-book-net
+
+networks:
+  address-book-net:
+    driver: bridge 

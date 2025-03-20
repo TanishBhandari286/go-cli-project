@@ -1,0 +1,34 @@
+# vscode
+.vscode
+
+# class and executable files in case there are any
+*.class
+*.exe
+
+# Maven target directory (compiled files, JARs, etc.)
+first/target/
+
+# Maven build artifacts
+first/*.log
+first/.mvn/
+first/mvnw
+first/mvnw.cmd
+
+# IDE-specific files (VS Code, Eclipse, IntelliJ, etc.)
+first/.classpath
+first/.project
+first/.settings/
+first/.idea/
+first/*.iml
+
+# Dependency directory (if used)
+first/vendor/
+
+# Logs and temporary files
+first/logs/
+first/*.log
+first/*.tmp
+first/.DS_Store
+
+# # Data
+# data
