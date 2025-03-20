@@ -1,5 +1,4 @@
 {
   "storageType": "csv",
-  "csvPath": "data/contacts.csv",
-  "binaryPath": "data/contacts.bin"
+  "csvPath": "data/csv/contacts.csv"
 }
